@@ -4,5 +4,5 @@ $('#calcular').click(function () {
         interes: $('#interes').val(),
         plazo: $('#plazo').val()
     }
-    console.log(data)
+    console.log(data) 
 })
