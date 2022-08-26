@@ -23,6 +23,7 @@ form{
 .table{
 
     margin: 0 auto;
+    margin-top: 10px;
     width: 300px;
     align-items: center;
     font-family: 'Courier New', Courier, monospace;
