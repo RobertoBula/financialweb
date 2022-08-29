@@ -8,7 +8,12 @@ $('#calcular').click(function () {
 
     
     const percent = data.interes/100
-    const result = eval("data.capital*(1+percent)**data.plazo")
+    const result = eval("data.capital*((1+percent)**data.plazo)")
     
     console.log(result)
+
+    const interest = result - data.capital
+    console.log(interest)
+
+    console.log(percent)
 })
