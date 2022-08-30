@@ -1,4 +1,5 @@
 $("#calcular").click(function () {
+  $("#tbody").empty();
   const datasimple = {
     capital: $("#capital").val(),
     interes: $("#interes").val().replace(",", "."),
