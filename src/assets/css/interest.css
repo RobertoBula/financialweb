@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&family=Space+Mono&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: url("../img/bg_interest_simple.jpg") no-repeat #f7ecde;
+  background-size: cover;
+}
+
+h3 {
+  font-family: "Space Mono", monospace;
+}
+
+form {
+  padding: 30px;
+  border-radius: 10px;
+  width: 500px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(40px);
+}
+
+.form-control {
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  border-bottom: 1px solid #333 !important;
+}
+
+.input-group-text {
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  border-bottom: 1px solid #333 !important;
+}
+
+.shadow {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.container-table {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(40px);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+tbody tr {
+  border-bottom: 1px solid #333;
+}
+
+.btn-primary {
+  background: #764d85 !important;
+  border-color: #764d85 !important;
+}
+
+.btn-outline-primary {
+  border-color: #764d85 !important;
+  color: #764d85 !important ;
+}
+
+.btn-outline-primary:hover {
+  background: #764d85 !important;
+  color: #fff !important;
+}
+
+.scroll {
+  max-height: 300px;
+  overflow: auto;
+  box-sizing: border-box;
+  scrollbar-color: rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0);
+  scrollbar-width: thin;
+}
+
+.scroll::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.scroll::-webkit-scrollbar:vertical {
+  width: 5px;
+}
+
+.scroll::-webkit-scrollbar-button:increment,
+.scroll::-webkit-scrollbar-button {
+  display: none;
+}
+
+.scroll::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  background-color: #45163a;
+  border-radius: 20px;
+}
+
+.scroll::-webkit-scrollbar-track {
+  border-radius: 20px;
+}
