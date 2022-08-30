@@ -15,7 +15,7 @@ $('#calcular').click(function () {
 
     // calcula el interés
 
-    const interest = datasimple.capital*percent*(datasimple.plazo/12)
+    let interest = datasimple.capital*percent*(datasimple.plazo/12)
    
     console.log(interest)
     
@@ -26,20 +26,25 @@ $('#calcular').click(function () {
     const total = (parseInt(datasimple.capital)+parseInt(interest))
     console.log(total)
 
-    const acapital = cuota-interest
-    const saldo = acapital-datasimple.capital
+    let acapital = cuota-interest
+    let saldo = acapital-datasimple.capital
     
 
-    // for(let i = 0; i <= cuota; i++){
-    //     let tr = `<tr>
-    //         <td>${i}</td>
-    //         <td>${cuota}</td>
-    //         <td>${interest}</td>
-    //         <td>${acapital}</td>
-    //         <td>${saldo}</td>
-    //     </tr>`;
-    // }
+    let tr = "";
+    for(let i = 1; i <= datasimple.plazo; i++){
+        if(i !== 1){
+            interest = datasimple.capital * percent * (datasimple.plazo/12);
+        }
+        tr += `<tr>
+            <td>${i}</td>
+            <td>${(cuota.toFixed(2))}</td>
+            <td>${interest}</td>
+            <td>${acapital=-interest}</td>
+            <td>${saldo=-acapital}</td>
+        </tr>`;
+    }
 
+    $('#tbody').append(tr);
   
 })
 

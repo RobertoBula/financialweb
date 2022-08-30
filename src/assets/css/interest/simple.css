@@ -4,7 +4,7 @@ form{
     padding: 20px;
     width: 300px;
     align-items: center;
-    background-color: rgb(230, 230, 230);
+    background-color: rgb(235, 230, 230);
     border-radius: 10px;
 
 }
@@ -14,6 +14,7 @@ form{
     margin-top: 20px;
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
+  
 }
 
 .mb-3{
@@ -21,6 +22,7 @@ form{
     align-items: center;
     justify-content: center;
 }
+
 .table{
 
     margin: 0 auto;
