@@ -33,11 +33,10 @@ $("#calcular").click(function () {
 
   let tr = "";
   for (let i = 1; i <= datasimple.plazo; i++) {
-    debugger;
     let abonoCapital = cuota - interest;
     interest = saldo * convert;
-      saldo -= abonoCapital;
-      tr += `<tr>
+    saldo -= abonoCapital;
+    tr += `<tr>
               <td>${i}</td>
               <td>${cuota.toFixed(0)}</td>
               <td>${interest.toFixed(0)}</td>
