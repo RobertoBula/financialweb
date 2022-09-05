@@ -1,44 +1,36 @@
-$('#calcular').click(function () {
-    const data = {
-        capital: $('#capital').val(),
-        interes: $('#interes').val(),
-        plazo: $('#plazo').val()
-    }
-    console.log(data) 
+$("#calcular").click(function () {
+  $("#tbody").empty();
+  const data = {
+    capital: $("#capital").val(),
+    interes: $("#interes").val(),
+    plazo: $("#plazo").val(),
+  };
+  console.log(data);
+  let capital = data.capital;
 
-    
-    let percent = data.interes/100
-    const result = eval("data.capital*((1+percent)**data.plazo)")
-    
-    console.log(result)
+  let percent = data.interes / 100;
+  const result = eval("data.capital*((1+percent)**data.plazo)");
 
-    let interest = result - data.capital
-    console.log(interest)
+  console.log(result);
 
-    let interestpy = data.capital * percent
-    console.log(interestpy)
-    console.log(percent)
-    
-    let valor = parseInt(data.capital) + parseInt(interestpy);
-    console.log(valor)
+  let interest = result - capital;
+  console.log(interest);
 
-    let tr ="" ;
-    for(let i = 1 ; i <= data.plazo ; i++){
-        let interestpy = data.capital * percent ;
-               
-        tr += `<tr> 
+  console.log(percent);
+
+  let tr = "";
+  for (let i = 1; i <= data.plazo; i++) {
+    debugger;
+    let interestpy = capital * percent;
+    let valor = parseInt(capital) + parseInt(interestpy);
+    tr += `<tr> 
             <td>${i}</td>
-            <td>${data.capital}</td>
+            <td>${capital}</td>
             <td>${interestpy}</td>
             <td>${valor}</td>
-
         </tr>`;
+    capital = valor;
+  }
 
-
-    }
-
-
-$("#tbody").append(tr);
-
-
+  $("#tbody").append(tr);
 });
