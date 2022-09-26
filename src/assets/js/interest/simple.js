@@ -18,8 +18,15 @@ $("#calcular").click(function () {
   let saldo = datasimple.capital - acapital;
 
   let tr = "";
+  let saldoTemp = 0;
   for (let i = 1; i <= datasimple.plazo; i++) {
-    
+    if (i === parseInt(datasimple.plazo) - 1) saldoTemp = saldo;
+    if (i === parseInt(datasimple.plazo)) {
+      cuota = saldoTemp;
+      acapital = cuota;
+      saldo = cuota - acapital;
+      interest = saldo * convert * (datasimple.plazo / 12);
+    }
     tr += `<tr>
     <td>${i}</td>
     <td>${cuota.toFixed(0)}</td>
@@ -30,9 +37,6 @@ $("#calcular").click(function () {
     saldo -= acapital;
     interest = saldo * convert * (datasimple.plazo / 12);
     acapital = cuota - interest;
-    if (i === datasimple.plazo -1){
-      cuota = saldo;
-    }
   }
   $("#tbody").append(tr);
 });
